@@ -18,19 +18,18 @@ defmodule DzirWeb.Router do
   scope "/", DzirWeb do
     pipe_through :browser
 
-    get "/",       PageController, :home
-    get "/embedd", PageController, :embedd
+    get "/",          PageController, :home
 
-    get "/about", PageController, :about
-    get "/մասին", PageController, :about
+    get "/about",     PageController, :about
+    get "/մասին",     PageController, :about
 
-    get "/websites", PageController, :websites
+    get "/websites",  PageController, :websites
 
-    get "/next", PageController, :next
-    get "/յաջորդ", PageController, :next
-    get "/prev", PageController, :prev
-    get "/նախորդ", PageController, :prev
-    get "/rand", PageController, :rand
+    get "/next",      PageController, :next
+    get "/յաջորդ",    PageController, :next
+    get "/prev",      PageController, :prev
+    get "/նախորդ",    PageController, :prev
+    get "/rand",      PageController, :rand
     get "/պատահական", PageController, :rand
 
   end
