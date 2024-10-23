@@ -37,4 +37,9 @@ defmodule DzirWeb.PageController do
     |> assign(:page, String.to_integer(params["page"]))
     |> render(:websites)
   end
+
+  def embedd(conn, _params) do
+    conn
+    |> render(:embedd, layout: false)
+  end
 end

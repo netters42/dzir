@@ -676,7 +676,6 @@ defmodule DzirWeb.CoreComponents do
 
   def list_websites(%{page: page} = assigns) do
     websites = Dzir.Webring.list_websites(page)
-    IO.inspect(page)
     ~H"""
     <%= for website <- websites do %>
       <tr class="odd:bg-gray-50">

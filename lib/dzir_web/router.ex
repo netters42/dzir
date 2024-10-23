@@ -18,7 +18,8 @@ defmodule DzirWeb.Router do
   scope "/", DzirWeb do
     pipe_through :browser
 
-    get "/",     PageController, :home
+    get "/",       PageController, :home
+    get "/embedd", PageController, :embedd
 
     get "/about", PageController, :about
     get "/մասին", PageController, :about
