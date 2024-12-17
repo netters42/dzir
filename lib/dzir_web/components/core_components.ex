@@ -685,15 +685,17 @@ defmodule DzirWeb.CoreComponents do
         <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= Enum.join(website.tags, ", ") %></td>
       </tr>
     <% end %>
-    <tr id="replaceMe" class="odd:bg-gray-50">
-      <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900" colspan="4">
-        <center>
-          <button class="btn primary" hx-get={"/websites?page=" <> to_string(page + 1)} hx-target="#replaceMe" hx-swap="outerHTML">
-            տեսնել աւելին…
-          </button>
-        </center>
-      </td>
-    </tr>
+    <%= if length(websites) > 10 do %>
+      <tr id="replaceMe" class="odd:bg-gray-50">
+        <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900" colspan="4">
+          <center>
+            <button class="btn primary" hx-get={"/websites?page=" <> to_string(page + 1)} hx-target="#replaceMe" hx-swap="outerHTML">
+              տեսնել աւելին…
+            </button>
+          </center>
+        </td>
+      </tr>
+    <% end %>
     """
   end
 end
